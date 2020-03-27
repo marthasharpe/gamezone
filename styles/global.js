@@ -8,7 +8,7 @@ export const globalStyles = StyleSheet.create({
     titleText: {
         fontFamily: 'sen-bold',
         fontSize: 24,
-        color: 'dodgerblue'
+        color: '#8E44AD'
     },
     bodyText: {
         marginVertical: 10,
