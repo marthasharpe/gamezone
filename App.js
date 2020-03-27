@@ -1,19 +1,20 @@
 import React from 'react';
-import Home from './screens/Home';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
+import 'react-native-gesture-handler';
+import StackNavigator from './routes/StackNavigator';
 
 const getFonts = () => Font.loadAsync({
   'sen-regular': require('./assets/fonts/Sen-Regular.ttf'),
   'sen-bold': require('./assets/fonts/Sen-Bold.ttf')
 })
 
-export default function App() {
+const App = () => {
   const [fontsLoaded, setFontsLoaded] = React.useState(false);
 
   if (fontsLoaded) {
     return (
-      <Home />
+      <StackNavigator />
     );
   } else {
     return (
@@ -23,5 +24,6 @@ export default function App() {
       />
     )
   }
-  
 }
+
+export default App;
